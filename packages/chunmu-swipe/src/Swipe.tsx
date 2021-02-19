@@ -1,5 +1,9 @@
 import React from 'react';
-import { SwipeProps } from './data';
+
+export interface SwipeProps {
+  children: React.ReactChildren
+}
+
 
 class Swipe extends React.Component<SwipeProps> {
   rootNode: Element | null = null;

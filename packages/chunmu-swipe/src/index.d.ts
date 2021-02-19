@@ -1,5 +1,5 @@
-import Swipe from './Swipe';
+import React from 'react';
 
-export * from './data';
-export * from './Swipe';
-export default Swipe;
+export interface SwipeProps {
+  children: React.ReactChildren
+}
