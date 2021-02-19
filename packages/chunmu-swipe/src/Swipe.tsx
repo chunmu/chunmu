@@ -1,11 +1,11 @@
 import React from 'react';
 
 export interface SwipeProps {
-  children: React.ReactChildren
+  axis: string;
 }
 
 
-class Swipe extends React.Component<SwipeProps> {
+class Swipe extends React.Component {
   rootNode: Element | null = null;
 
   containerNode: Element | null = null;
@@ -37,6 +37,11 @@ class Swipe extends React.Component<SwipeProps> {
   indexCurrent = null;
 
   firstRenderTimeout = null;
+
+  constructor(props: SwipeProps) {
+    super(props);
+
+  }
 
   render() {
     return (
