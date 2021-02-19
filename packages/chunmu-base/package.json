@@ -3,7 +3,7 @@
   "version": "0.0.5",
   "description": "> TODO: description",
   "author": "chunmu.zhang",
-  "homepage": "https://github.com/chunmu/chunmu-sku/tree/master/packages/chunmu-base#readme",
+  "homepage": "https://github.com/chunmu/chunmu/tree/master/packages/chunmu-base#readme",
   "license": "ISC",
   "main": "lib/index.js",
   "types": "./lib/main.d.ts",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chunmu/chunmu-sku.git"
+    "url": "git+https://github.com/chunmu/chunmu.git"
   },
   "scripts": {
     "lint": "eslint --ext .ts ./src",
@@ -31,7 +31,7 @@
     "test:cov": "npm test -- --coverage"
   },
   "bugs": {
-    "url": "https://github.com/chunmu/chunmu-sku/issues"
+    "url": "https://github.com/chunmu/chunmu/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

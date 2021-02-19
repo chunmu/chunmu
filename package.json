@@ -1,5 +1,5 @@
 {
-  "name": "chunmu-sku",
+  "name": "chunmu",
   "version": "1.0.0",
   "description": "chunmu js tool project with lerna manage",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chunmu/chunmu-sku.git"
+    "url": "git+https://github.com/chunmu/chunmu.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/chunmu/chunmu-sku/issues"
+    "url": "https://github.com/chunmu/chunmu/issues"
   },
-  "homepage": "https://github.com/chunmu/chunmu-sku#readme",
+  "homepage": "https://github.com/chunmu/chunmu#readme",
   "devDependencies": {
     "lerna": "^3.22.1"
   }
