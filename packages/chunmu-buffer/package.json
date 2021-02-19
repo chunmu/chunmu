@@ -1,6 +1,6 @@
 {
   "name": "chunmu-buffer",
-  "version": "0.0.5-alpha.0",
+  "version": "0.0.5",
   "description": "> TODO: description",
   "author": "chunmu.zhang",
   "homepage": "https://github.com/chunmu/chunmu-sku/tree/master/packages/chunmu-buffer#readme",
@@ -57,6 +57,6 @@
     "coverageProvider": "v8"
   },
   "dependencies": {
-    "chunmu-base": "^0.0.5-alpha.0"
+    "chunmu-base": "^0.0.5"
   }
 }
