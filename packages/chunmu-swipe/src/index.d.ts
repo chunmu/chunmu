@@ -96,12 +96,16 @@ export interface AxisProperties {
   clientLength?: any,
 }
 
-export interface ExtraEvent {
-  touches: MatrixyPageXY[],
-  persist: () => void,
-}
+// export interface ExtraEvent {
+//   touches?: MatrixyPageXY[],
+//   persist?: () => void,
+// }
 
-export type SwipeEvent = ExtraEvent & React.TouchEvent<HTMLDivElement> & React.MouseEvent
+export interface SwipeMouseEvent extends React.MouseEvent {
+  mouseTouches: MatrixyPageXY[],
+  isMouse: boolean,
+}
+export type SwipeEvent = SwipeMouseEvent & React.TouchEvent<HTMLDivElement>
 
 export interface SwipeEventRes {
   remove: () => void,

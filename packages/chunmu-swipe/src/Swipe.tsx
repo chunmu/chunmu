@@ -9,7 +9,13 @@ import {
   adaptMouse,
   createTransition
 } from './util';
-import { SwipeProps, SwipeEventRes, SwipeEvent, SwipeState, ContainerStyle } from './index.d';
+import {
+  SwipeProps,
+  SwipeEventRes,
+  SwipeEvent,
+  SwipeState,
+  ContainerStyle
+} from './index.d';
 
 let nodeWhoClaimedTheScroll: null | HTMLElement = null;
 
@@ -159,8 +165,13 @@ class Swipe extends React.Component<SwipeProps, SwipeState> {
 
   handleSwipeStart = (event: SwipeEvent) => {
     const { axis } = this.props;
-
-    const touch = applyRotationMatrix(event.touches[0], axis);
+    let touch = null;
+    if (event.isMouse) {
+      touch = applyRotationMatrix(event.touches[0], axis)
+    } else {
+      touch = applyRotationMatrix(event.mouseTouches[0], axis)
+    }
+    
     if (this.rootNode !== null && this.containerNode !== null) {
       const domReact: DOMRect = this.rootNode.getBoundingClientRect();
       const x = axisProperties.length[axis]

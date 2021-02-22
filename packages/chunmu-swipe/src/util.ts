@@ -2,7 +2,12 @@ import React from 'react';
 import warning from 'warning';
 import { kNoop } from 'chunmu-base';
 import { axisProperties, RESISTANCE_COEF } from './constants';
-import { SpringConfig, SwipeEvent, MatrixyPageXY, RotationMatrixXY } from './index.d';
+import {
+  SpringConfig,
+  MatrixyPageXY,
+  RotationMatrixXY,
+  SwipeEvent
+} from './index.d';
 
 // eslint-disable-next-line
 export function addEventListener(node: HTMLElement | null, event: string, handler: any, options?: any) {
@@ -109,7 +114,7 @@ export function applyRotationMatrix(touch: MatrixyPageXY, axis: string) {
 }
 
 export function adaptMouse(event: SwipeEvent): SwipeEvent {
-  event.touches = [{ pageX: event.pageX, pageY: event.pageY }];
+  event.mouseTouches = [{ pageX: event.pageX, pageY: event.pageY }];
   return event;
 }
 
