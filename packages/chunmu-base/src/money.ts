@@ -1,5 +1,5 @@
 
-import { MoneyCommaParams, UnnormalNumberResponse } from '../src/typings/money'
+import { MoneyCommaParams, UnnormalNumberResponse } from './index.d'
 
 export function formatMoneyComma({
   value,

@@ -1,5 +1,6 @@
 import typescript from 'rollup-plugin-typescript2';
 import babel from 'rollup-plugin-babel';
+import copy from 'rollup-plugin-copy'
 import pkg from './package.json';
 
 const extensions = ['.ts'];
@@ -25,6 +26,12 @@ export default [
           ['@babel/plugin-transform-runtime', { version: babelRuntimeVersion }],
         ],
         runtimeHelpers: true,
+      }),
+      copy({
+        targets: [
+          { src: 'src/*.d.ts', dest: 'lib/' },
+          { src: 'src/*/*.d.ts', dest: 'lib/' },
+        ]
       })
     ]
   }

@@ -1,4 +1,4 @@
-import { FileSizeParams, FileSizeUnitNSMap, FileSizeUnitSNMap, FileSizeFormatParams } from './typings/it';
+import { FileSizeParams, FileSizeUnitNSMap, FileSizeUnitSNMap, FileSizeFormatParams } from './index.d';
 
 const unitSNMap: FileSizeUnitSNMap = {
   B: 1,

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "typeRoots": [
       "node_modules/@types",
-      "src/typings"
+      "src/typings.d.ts"
     ],
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
@@ -10,7 +10,7 @@
     "declaration": true,
     "outDir": "./lib",
     "strict": true,
-    "lib": ["es6"],
+    "lib": ["es6", "DOM"],
     "jsx": "react"
   },
   "include": [

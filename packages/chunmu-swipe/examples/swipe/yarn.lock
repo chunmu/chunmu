@@ -3294,10 +3294,10 @@ chrome-trace-event@^1.0.2:
   dependencies:
     tslib "^1.9.0"
 
-chunmu-swipe@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/chunmu-swipe/-/chunmu-swipe-0.0.9.tgz#787f519278afb7aaa60616a681fc9dfa14fb21c0"
-  integrity sha512-WKUytqIMfmrD3d4T92F8XSvbLkVUsO8A/sHAiMklClnLibttlaZgTRx71JpeaiYanutaZBdlJqWIZNTrTsVVrA==
+chunmu-swipe@^0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/chunmu-swipe/-/chunmu-swipe-0.0.10.tgz#5f5595f6ab3369929b191ec34b9ab8ced11571bb"
+  integrity sha512-/St2V09U67zrII4HG2BTHtULM3NlUpOx2iSc0g7N0bsc000t9NgF0Khura/2bb+zcFFlS3OhNozvHDHk2A+/JA==
   dependencies:
     "@types/react" "^17.0.2"
     react "^17.0.1"
