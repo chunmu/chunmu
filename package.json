@@ -19,5 +19,8 @@
   "homepage": "https://github.com/chunmu/chunmu#readme",
   "devDependencies": {
     "lerna": "^3.22.1"
+  },
+  "dependencies": {
+    "warning": "^4.0.3"
   }
 }
