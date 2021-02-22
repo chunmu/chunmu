@@ -1,4 +1,4 @@
-import React, { RefObject } from 'react';
+import React from 'react';
 import warning from 'warning';
 import { axisProperties, UNCERTAINTY_THRESHOLD, styles } from './constants';
 import {

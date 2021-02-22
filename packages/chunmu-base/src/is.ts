@@ -11,6 +11,6 @@ export const isObject = (obj: any): boolean => obj && !Array.isArray(obj) && typ
 // eslint-disable-next-line
 export const isPromise = (p: any): boolean => p && isFunc(p.then);
 // eslint-disable-next-line
-export const isIterator = (it: any): boolean => it && isFunc(it.next) && isFunc(it.throw)
+export const isIterator = (it: any): boolean => it && isFunc(it.next) && isFunc(it.throw);
 // eslint-disable-next-line
-export const isIterable = (it: any) => (it && isFunc(Symbol) ? isFunc(it[Symbol.iterator]) : Array.isArray(it))
+export const isIterable = (it: any) => (it && isFunc(Symbol) ? isFunc(it[Symbol.iterator]) : Array.isArray(it));

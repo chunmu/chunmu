@@ -118,5 +118,3 @@ export interface ContainerStyle {
 }
 
 export default Swipe;
-
-declare module 'chunmu-base';
