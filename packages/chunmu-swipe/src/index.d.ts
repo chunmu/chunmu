@@ -1,6 +1,8 @@
 import React from 'react';
 import Swipe from './Swipe';
 
+export const defaultProps: SwipeProps
+
 export interface SpringConfig {
   duration: string,
   easeFunction: string,

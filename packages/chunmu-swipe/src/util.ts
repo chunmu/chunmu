@@ -1,5 +1,4 @@
 import React from 'react';
-import warning from 'warning';
 import { kNoop } from 'chunmu-base';
 import { axisProperties, RESISTANCE_COEF } from './constants';
 import {
@@ -16,6 +15,7 @@ export function addEventListener(node: HTMLElement | null, event: string, handle
       remove: kNoop
     }
   }
+
   node.addEventListener(event, handler, options);
   // node.addEventListener(event, handler, options);
   return {
@@ -91,7 +91,7 @@ export function checkIndexBounds (props: any) {
 
   const childrenCount = React.Children.count(children);
 
-  warning(
+  console.warn(
     index >= 0 && index <= childrenCount,
     `react-swipeable-view: the new index: ${index} is out of bounds: [0-${childrenCount}].`,
   );
@@ -115,6 +115,7 @@ export function applyRotationMatrix(touch: MatrixyPageXY, axis: string) {
 
 export function adaptMouse(event: SwipeEvent): SwipeEvent {
   event.mouseTouches = [{ pageX: event.pageX, pageY: event.pageY }];
+  event.isMouse = true;
   return event;
 }
 

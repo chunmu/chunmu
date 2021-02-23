@@ -1831,7 +1831,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^17.0.0", "@types/react@^17.0.2":
+"@types/react@*", "@types/react@^17.0.0":
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.2.tgz#3de24c4efef902dd9795a49c75f760cbe4f7a5a8"
   integrity sha512-Xt40xQsrkdvjn1EyWe1Bc0dJLcil/9x2vAuW7ya+PuQip4UYUaXyhzWmAbwRsdMgwOFHpfp7/FFZebDU6Y8VHA==
@@ -3293,14 +3293,6 @@ chrome-trace-event@^1.0.2:
   integrity sha512-9e/zx1jw7B4CO+c/RXoCsfg/x1AfUBioy4owYH0bJprEYAx5hRFLRhWBqHAG57D0ZM4H7vxbP7bPe0VwhQRYDQ==
   dependencies:
     tslib "^1.9.0"
-
-chunmu-swipe@^0.0.10:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/chunmu-swipe/-/chunmu-swipe-0.0.10.tgz#5f5595f6ab3369929b191ec34b9ab8ced11571bb"
-  integrity sha512-/St2V09U67zrII4HG2BTHtULM3NlUpOx2iSc0g7N0bsc000t9NgF0Khura/2bb+zcFFlS3OhNozvHDHk2A+/JA==
-  dependencies:
-    "@types/react" "^17.0.2"
-    react "^17.0.1"
 
 ci-info@^2.0.0:
   version "2.0.0"

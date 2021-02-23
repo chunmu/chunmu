@@ -1,13 +1,13 @@
 import React from 'react';
-import warning from 'warning';
 import { axisProperties, UNCERTAINTY_THRESHOLD, styles } from './constants';
 import {
-  addEventListener,
-  applyRotationMatrix,
-  computeIndex,
-  getDomTreeShapes,
   adaptMouse,
-  createTransition
+  computeIndex,
+  addEventListener,
+  getDomTreeShapes,
+  createTransition,
+  applyRotationMatrix,
+  getDisplaySameSlide,
 } from './util';
 import {
   SwipeProps,
@@ -165,12 +165,10 @@ class Swipe extends React.Component<SwipeProps, SwipeState> {
 
   handleSwipeStart = (event: SwipeEvent) => {
     const { axis } = this.props;
-    let touch = null;
-    if (event.isMouse) {
-      touch = applyRotationMatrix(event.touches[0], axis)
-    } else {
-      touch = applyRotationMatrix(event.mouseTouches[0], axis)
-    }
+    const touch = applyRotationMatrix(
+      event.isMouse ? event.mouseTouches[0] : event.touches[0],
+      axis
+    );
     
     if (this.rootNode !== null && this.containerNode !== null) {
       const domReact: DOMRect = this.rootNode.getBoundingClientRect();
@@ -189,6 +187,7 @@ class Swipe extends React.Component<SwipeProps, SwipeState> {
         computedStyle.getPropertyValue('transform');
   
       if (transform && transform !== 'none') {
+        console.log(transform, 'transform')
         const transformValues = transform
           .split('(')[1]
           .split(')')[0]
@@ -208,6 +207,7 @@ class Swipe extends React.Component<SwipeProps, SwipeState> {
             (this.viewLength -
               parseInt(rootStyle.paddingLeft, 10) -
               parseInt(rootStyle.paddingRight, 10)) || 0;
+              console.log(this.startIndex, 'startIndex', tranformNormalized.pageX, this.viewLength)
       }
     }
   };
@@ -226,7 +226,10 @@ class Swipe extends React.Component<SwipeProps, SwipeState> {
     }
 
     const { axis, children, ignoreNativeScroll, onSwitching, resistance } = this.props;
-    const touch = applyRotationMatrix(event.touches[0], axis);
+    const touch = applyRotationMatrix(
+      event.isMouse ? event.mouseTouches[0] : event.touches[0],
+      axis
+    );
 
     // We don't know yet.
     if (this.isSwiping === undefined) {
@@ -504,6 +507,21 @@ class Swipe extends React.Component<SwipeProps, SwipeState> {
     }
   }
 
+  // eslint-disable-next-line camelcase
+  UNSAFE_componentWillReceiveProps(nextProps: SwipeProps) {
+    const { index } = nextProps;
+
+    if (typeof index === 'number' && index !== this.props.index) {
+
+      this.setIndexCurrent(index);
+      this.setState({
+        // If true, we are going to change the children. We shoudn't animate it.
+        displaySameSlide: getDisplaySameSlide(this.props, nextProps),
+        indexLatest: index,
+      });
+    }
+  }
+
   render() {
     const {
       animateHeight,
@@ -527,18 +545,8 @@ class Swipe extends React.Component<SwipeProps, SwipeState> {
       isDragging,
       renderOnlyActive,
     } = this.state;
-    const mouseEvents =
-      !disabled && enableMouseEvents
-        ? {
-            onMouseDown: this.handleMouseDown,
-            onMouseUp: this.handleMouseUp,
-            onMouseLeave: this.handleMouseLeave,
-            onMouseMove: this.handleMouseMove,
-          }
-        : {};
-
     // There is no point to animate if we are already providing a height.
-    warning(
+    console.warn(
       !animateHeight || !containerStyleProp || !containerStyleProp.height,
       `react-swipeable-view: You are setting animateHeight to true but you are
 also providing a custom height.
@@ -607,7 +615,7 @@ So animateHeight is most likely having no effect at all.`,
               return null;
             }
 
-            warning(
+            console.warn(
               React.isValidElement(child),
               `react-swipeable-view: one of the children provided is invalid: ${child}.
 We are expecting a valid React Element`,
