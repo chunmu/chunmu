@@ -1,6 +1,6 @@
 {
   "name": "chunmu-swipe",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "定制版本的轮播器",
   "author": "chunmu.zhang",
   "homepage": "https://github.com/chunmu/chunmu/tree/master/packages/chunmu-swipe#readme",
@@ -62,7 +62,7 @@
   },
   "dependencies": {
     "@types/react": "^17.0.2",
-    "chunmu-base": "^0.0.17",
+    "chunmu-base": "^0.0.18",
     "react": "^17.0.1",
     "react-event-listener": "^0.6.6",
     "shallow-equal": "^1.2.1"
