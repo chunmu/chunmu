@@ -1,6 +1,6 @@
 import React from 'react';
 import Swipe from './Swipe';
-export * from './AutoPlay';
+import AutoPlaySwipe from './AutoPlay'
 
 export const defaultProps: SwipeProps
 
@@ -133,3 +133,6 @@ export interface ContainerStyle {
 }
 
 export default Swipe;
+export {
+  AutoPlaySwipe
+}
