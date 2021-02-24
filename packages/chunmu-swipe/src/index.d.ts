@@ -24,7 +24,7 @@ export interface SwipeProps {
   enableMouseEvents: boolean,
   hysteresis: number,
   ignoreNativeScroll: boolean,
-  index: number,
+  index: number | undefined,
   threshold: number,
   springConfig: SpringConfig,
   resistance: boolean,

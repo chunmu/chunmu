@@ -45,6 +45,7 @@ export default class AutoPlaySwipe extends React.Component<AutoPlaySwipeProps, {
   }
 
   handleInterval = () => {
+    
     const { children, direction, onChangeIndex, slideCount } = this.props;
 
     const indexLatest = this.state.index;
@@ -55,7 +56,7 @@ export default class AutoPlaySwipe extends React.Component<AutoPlaySwipeProps, {
     } else {
       indexNew -= 1;
     }
-
+    console.log(indexNew, 'indexNew', indexLatest)
     if (slideCount || children) {
       indexNew = mod(indexNew, slideCount || React.Children.count(children));
     }

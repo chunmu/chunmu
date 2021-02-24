@@ -12,7 +12,7 @@ export const defaultProps: SwipeProps = {
   enableMouseEvents: false,
   hysteresis: 0.6,
   ignoreNativeScroll: false,
-  index: 0,
+  index: undefined,
   threshold: 5,
   springConfig: {
     duration: '0.35s',
