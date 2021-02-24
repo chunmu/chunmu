@@ -1,5 +1,6 @@
 import React from 'react';
 import Swipe from './Swipe';
+export * from './AutoPlay';
 
 export const defaultProps: SwipeProps
 
