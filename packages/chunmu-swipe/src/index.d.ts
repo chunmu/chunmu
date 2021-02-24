@@ -2,7 +2,9 @@ import React from 'react';
 import Swipe from './Swipe';
 import AutoPlaySwipe from './AutoPlay'
 
-export const defaultProps: SwipeProps
+export const defaultProps: SwipeProps;
+
+export const autoPlayDefaultProps: AutoPlayProps;
 
 export interface SpringConfig {
   duration: string,
