@@ -12,6 +12,7 @@ export interface SpringConfig {
 export type xyKeys = 'x' | 'y' | 'x-reverse' | 'y-reverse';
 
 export interface SwipeProps {
+  slideCount?: number,
   animateHeight: boolean,
   animateTransitions: boolean,
   axis: xyKeys,
@@ -27,7 +28,7 @@ export interface SwipeProps {
   // eslint-disable-next-line
   action: any,
   // eslint-disable-next-line
-  onSwitching: any,
+  onSwitching?: any,
   // eslint-disable-next-line
   onChangeIndex?: (n: number, l: number, params: any) => void,
   onTouchStart?: (event: React.TouchEvent<HTMLDivElement>) => void,
@@ -45,6 +46,18 @@ export interface SwipeProps {
   slideClassName?: string,
   // eslint-disable-next-line
   style?: any,
+}
+
+export interface AutoPlayProps {
+  autoplay: boolean,
+  direction: 'incremental' | 'decremental',
+  interval: number,
+}
+
+export interface AutoPlaySwipeProps extends SwipeProps {
+  autoplay: boolean,
+  direction: 'incremental' | 'decremental',
+  interval: number,
 }
 
 export interface SwipeState {

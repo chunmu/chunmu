@@ -1,4 +1,4 @@
-import { SwipeProps, AxisProperties } from './index.d'
+import { SwipeProps, AxisProperties, AutoPlayProps } from './index.d'
 
 export const RESISTANCE_COEF = 0.5;
 export const UNCERTAINTY_THRESHOLD = 3;
@@ -37,6 +37,12 @@ export const styles = {
     overflow: 'auto',
   },
 };
+
+export const autoPlayDefaultProps: AutoPlayProps = {
+  autoplay: true,
+  direction: 'incremental',
+  interval: 3000,
+}
 
 export const axisProperties: AxisProperties = {
   root: {
