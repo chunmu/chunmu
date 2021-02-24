@@ -112,11 +112,6 @@ export interface AxisProperties {
   clientLength?: any,
 }
 
-// export interface ExtraEvent {
-//   touches?: MatrixyPageXY[],
-//   persist?: () => void,
-// }
-
 export interface SwipeMouseEvent extends React.MouseEvent {
   mouseTouches: MatrixyPageXY[],
   isMouse: boolean,
