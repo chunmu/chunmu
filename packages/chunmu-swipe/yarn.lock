@@ -1141,10 +1141,10 @@ char-regex@^1.0.2:
   resolved "https://registry.yarnpkg.com/char-regex/-/char-regex-1.0.2.tgz#d744358226217f981ed58f479b1d6bcc29545dcf"
   integrity sha512-kWWXztvZ5SBQV+eRgKFeh8q5sLuZY2+8WUIzlxWVTg+oGwY14qylx1KbKzHd8P6ZYkAg0xyIDU9JMHhyJMZ1jw==
 
-chunmu-base@^0.0.15:
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/chunmu-base/-/chunmu-base-0.0.15.tgz#ef303e3e5d1e25aff863fbedcb951ccf628bdb3b"
-  integrity sha512-DPUTdDlQ+pczA+LSs1IQBRYeo/dccrm1EOSdBVF1ZK8lnwtGb+b/OjTtfSgz4tXEQ8rrqfP//icWUeyy9NLusQ==
+chunmu-base@^0.0.22:
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/chunmu-base/-/chunmu-base-0.0.22.tgz#5b93179551632f520a5c536cc38dcb6ee261de1a"
+  integrity sha512-T4JTFuqIhNUTduhrxQ3UXqOBHv8R1VG9bVQrWkhR71r0RWeqpAUu4SAv+hrA6cNR8H7ZZLlE8SHmvVv5qhGf+A==
 
 ci-info@^2.0.0:
   version "2.0.0"
@@ -2935,9 +2935,9 @@ lodash.sortby@^4.7.0:
   integrity sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=
 
 lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20:
-  version "4.17.20"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
-  integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
